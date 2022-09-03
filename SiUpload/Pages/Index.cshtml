@@ -1,0 +1,102 @@
+﻿@page
+@model SiUpload.Pages.IndexModel
+@{
+}
+
+<head>
+
+
+</head>
+
+<body>
+
+
+    <div class="page-body">
+        <div class="container-xl">
+            <div class="card card-lg">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="h2">PAS_21</p>
+                            <address>
+                                João Oliveira - Teste Cebraspe<br>
+                                Cargo<br>
+                                Ampla Concorrênica<br>
+                            </address>
+                        </div>
+                        <div class=" col-12 my-5 card card-lg">
+
+                            <div style="text-align: center" class="my-3">
+                                <h1>Realizar o upload</h1>
+                            </div>
+                            <div style="text-align: justify">
+                                <h3> Passo 1: Selecione a alinea desejada </h3>
+                                <h3> Passo 2: Selecione o arquivo</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-tight py-4">
+
+                        <form method="post" action="" autocomplete="off">
+                            <div class="card-body">
+
+
+
+                                <div class="mb-3">
+
+                                    <select class="form-select mb-2">
+                                        <option selected value="-" disabled="disabled"> Selecione a Alinea</option>
+                                        <option value="1"> Primeiro Arquivo</option>
+                                        <option value="2"> Segundo Arquivo</option>
+                                    </select>
+
+                                </div>
+
+                                <div>
+                                    <input type="file" id="Upload" class="form-control mb-2" name="file" accept="" multiple="multiple" />
+                                </div>
+
+
+                                <div>
+                                    <button type="submit" class="btn btn-success">Enviar</button>
+                                    <button type="button" onclick="CancelarUpload();" class="btn btn-danger">Cancelar</button>
+                                    <button type="button" onclick="window.print();" class="btn btn-info">Comprovante</button>
+                                </div>
+
+
+                            </div>
+
+                        </form>
+                    </div>
+
+
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card card-sm" style="width:210px">
+                            <embed src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQyO-30kWpnKCB1pM49rsEaTpZAETjEB3bG3PudNR&s" type="application/pdf" frameBorder="0" scrolling="auto" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQyO-30kWpnKCB1pM49rsEaTpZAETjEB3bG3PudNR&s" style="margin:4px; width:200px" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card card-sm" style="width:210px">
+                            <embed src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQyO-30kWpnKCB1pM49rsEaTpZAETjEB3bG3PudNR&s" type="application/pdf" frameBorder="0" scrolling="auto" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQyO-30kWpnKCB1pM49rsEaTpZAETjEB3bG3PudNR&s" style="margin:4px; width:200px" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+
+    function CancelarUpload() {
+        document.getElementById("Upload").value = null;
+    }
+
+</script>
+
+
+
+

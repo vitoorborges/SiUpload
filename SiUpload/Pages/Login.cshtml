@@ -1,0 +1,77 @@
+﻿@page "/login/{IdEvento}"
+@model LoginModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<header>
+</header>
+
+<body>
+
+    <div class="page page-center">
+        <div class="container-tight py-4">
+            <div class="text-center mb-5">
+                <a href="." class="navbar-brand navbar-brand-autodark"><img src="~/assets/logo-cebraspe-Completa-cor-g.png" height="50" alt=""></a>
+            </div>
+            <div class="text-center mb-3">
+                <h2> Upload para imagens do carrefour </h2>
+            </div>
+            <form class="card card-md" method="post" autocomplete="off">
+                <div class="card-body">
+                   
+                    <div class="mb-3">
+                        <label class="form-label">CPF</label>
+                        <input type="text" id="CPF" name="CPF" class="form-control" placeholder="CPF" autocomplete="off">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">
+                            Senha
+
+                        </label>
+                        <div class="input-group input-group-flat">
+                            <input id="Senha" name="Senha" type="password" class="form-control" placeholder="Senha" autocomplete="off">
+                            <span class="input-group-text">
+                                <a id="showPassword" class="link-secondary" aria-label="Show password">
+                                    <!-- Download SVG icon from http://tabler-icons.io/i/eye -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="2"></circle><path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7"></path></svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mb-2 d-flex justify-content-between">
+                        <label class="form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <span class="form-check-label">Manter logado</span>
+                        </label>
+                        <span class="form-label-description">
+                            <a href="./forgot-password.html">Esqueci minha senha</a>
+                        </span>
+                    </div>
+                    <div class="form-footer">
+                        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                    </div>
+                </div>
+
+            </form>
+           
+        </div>
+    </div>
+
+
+</body>
+
+<script type="text/javascript">
+
+    const password = document.getElementById("password");
+    const element = document.getElementById("showPassword");
+    element.addEventListener("click", () => {
+        if (password.type == "password") {
+
+            password.type = "text";
+        }else{
+            password.type = "password";
+        }
+    });
+
+</script>
